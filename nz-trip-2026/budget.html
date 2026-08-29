@@ -19,133 +19,72 @@
     --tussock-soft:#F5EADA;
     --moss:#3D6B4B;
     --moss-soft:#E3EDE4;
-    --bar:#0D5A61;
     --shadow:0 1px 2px rgba(16,30,29,.05), 0 10px 28px -18px rgba(16,30,29,.35);
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --paper:#0B1514;
-      --panel:#131F1E;
-      --panel-2:#1A2827;
-      --ink:#E4EDEB;
-      --ink-2:#93AAA7;
-      --ink-3:#6E8582;
-      --rule:rgba(228,237,235,.14);
-      --rule-2:rgba(228,237,235,.28);
-      --fiord:#63C3C8;
-      --fiord-soft:#14312F;
-      --tussock:#D9A85E;
-      --tussock-soft:#2A2115;
-      --moss:#82B491;
-      --moss-soft:#16261B;
-      --bar:#3E9BA1;
+      --paper:#0B1514; --panel:#131F1E; --panel-2:#1A2827;
+      --ink:#E4EDEB; --ink-2:#93AAA7; --ink-3:#6E8582;
+      --rule:rgba(228,237,235,.14); --rule-2:rgba(228,237,235,.28);
+      --fiord:#63C3C8; --fiord-soft:#14312F;
+      --tussock:#D9A85E; --tussock-soft:#2A2115;
+      --moss:#82B491; --moss-soft:#16261B;
       --shadow:0 1px 2px rgba(0,0,0,.35), 0 14px 34px -20px rgba(0,0,0,.7);
     }
   }
   :root[data-theme="dark"]{
-    --paper:#0B1514;
-    --panel:#131F1E;
-    --panel-2:#1A2827;
-    --ink:#E4EDEB;
-    --ink-2:#93AAA7;
-    --ink-3:#6E8582;
-    --rule:rgba(228,237,235,.14);
-    --rule-2:rgba(228,237,235,.28);
-    --fiord:#63C3C8;
-    --fiord-soft:#14312F;
-    --tussock:#D9A85E;
-    --tussock-soft:#2A2115;
-    --moss:#82B491;
-    --moss-soft:#16261B;
-    --bar:#3E9BA1;
+    --paper:#0B1514; --panel:#131F1E; --panel-2:#1A2827;
+    --ink:#E4EDEB; --ink-2:#93AAA7; --ink-3:#6E8582;
+    --rule:rgba(228,237,235,.14); --rule-2:rgba(228,237,235,.28);
+    --fiord:#63C3C8; --fiord-soft:#14312F;
+    --tussock:#D9A85E; --tussock-soft:#2A2115;
+    --moss:#82B491; --moss-soft:#16261B;
     --shadow:0 1px 2px rgba(0,0,0,.35), 0 14px 34px -20px rgba(0,0,0,.7);
   }
 
   *{box-sizing:border-box}
   body{
-    background:var(--paper);
-    color:var(--ink);
+    background:var(--paper);color:var(--ink);
     font-family:"Newsreader",Georgia,"Nanum Myeongjo",serif;
-    font-size:16.5px;
-    line-height:1.62;
-    -webkit-font-smoothing:antialiased;
+    font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased;
   }
   .shell{max-width:1020px;margin:0 auto;padding:clamp(28px,5vw,64px) clamp(18px,4vw,40px) 96px}
 
-  /* ---------- masthead ---------- */
   .mast{border-bottom:2px solid var(--rule-2);padding-bottom:26px}
-  .kicker{
-    font-family:"Archivo",system-ui,sans-serif;
-    font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
-    color:var(--fiord);
-  }
-  h1{
-    font-family:"Archivo",system-ui,sans-serif;
-    font-weight:700;font-size:clamp(30px,4.6vw,46px);line-height:1.1;
-    letter-spacing:-.022em;margin:.34em 0 .28em;text-wrap:balance;
-  }
+  .kicker{font-family:"Archivo",system-ui,sans-serif;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--fiord)}
+  h1{font-family:"Archivo",system-ui,sans-serif;font-weight:700;font-size:clamp(30px,4.6vw,46px);line-height:1.1;letter-spacing:-.022em;margin:.34em 0 .28em;text-wrap:balance}
   .dek{color:var(--ink-2);max-width:64ch;margin:0;font-size:16px}
-  .mast-meta{
-    display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:20px;
-    font-family:"Archivo",system-ui,sans-serif;font-size:12.5px;color:var(--ink-3);
-  }
+  .mast-meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:20px;font-family:"Archivo",system-ui,sans-serif;font-size:12.5px;color:var(--ink-3)}
   .mast-meta b{color:var(--ink-2);font-weight:600}
 
-  /* ---------- sections ---------- */
   section{margin-top:clamp(44px,6vw,68px)}
   .sec-head{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid var(--rule-2);padding-bottom:10px;margin-bottom:22px}
-  .sec-num{
-    font-family:"JetBrains Mono",ui-monospace,monospace;font-size:13px;font-weight:600;
-    color:var(--fiord);letter-spacing:.02em;
-  }
-  h2{
-    font-family:"Archivo",system-ui,sans-serif;font-weight:600;
-    font-size:clamp(19px,2.4vw,23px);letter-spacing:-.012em;margin:0;
-  }
+  .sec-num{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:13px;font-weight:600;color:var(--fiord)}
+  h2{font-family:"Archivo",system-ui,sans-serif;font-weight:600;font-size:clamp(19px,2.4vw,23px);letter-spacing:-.012em;margin:0}
   .sec-note{margin-left:auto;font-family:"Archivo",system-ui,sans-serif;font-size:12px;color:var(--ink-3)}
   .lede{color:var(--ink-2);max-width:66ch;margin:0 0 22px}
 
-  /* ---------- headline figures ---------- */
-  .figures{
-    display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);
-    grid-template-columns:repeat(auto-fit,minmax(196px,1fr));
-    border-radius:3px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:12px;
-  }
+  .figures{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);grid-template-columns:repeat(auto-fit,minmax(196px,1fr));border-radius:3px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:24px}
   .fig{background:var(--panel);padding:20px 22px 18px}
   .fig.lead{background:var(--fiord-soft)}
-  .fig-label{
-    font-family:"Archivo",system-ui,sans-serif;font-size:11px;font-weight:600;
-    letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);
-  }
+  .fig.warn{background:var(--tussock-soft)}
+  .fig-label{font-family:"Archivo",system-ui,sans-serif;font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3)}
   .fig.lead .fig-label{color:var(--fiord)}
-  .fig-val{
-    font-family:"JetBrains Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums;
-    font-size:clamp(23px,3.3vw,30px);font-weight:600;letter-spacing:-.03em;
-    margin-top:7px;line-height:1.05;
-  }
+  .fig.warn .fig-label{color:var(--tussock)}
+  .fig-val{font-family:"JetBrains Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums;font-size:clamp(23px,3.3vw,30px);font-weight:600;letter-spacing:-.03em;margin-top:7px;line-height:1.05}
   .fig-sub{font-size:13.5px;color:var(--ink-2);margin-top:6px;line-height:1.45}
 
-  /* ---------- tables ---------- */
   .scroll{overflow-x:auto;border:1px solid var(--rule);border-radius:3px;background:var(--panel);box-shadow:var(--shadow)}
-  table{border-collapse:collapse;width:100%;min-width:660px;font-size:14.5px}
+  table{border-collapse:collapse;width:100%;min-width:680px;font-size:14.5px}
   th,td{padding:11px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule)}
-  thead th{
-    font-family:"Archivo",system-ui,sans-serif;font-size:11px;font-weight:600;
-    letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);
-    background:var(--panel-2);border-bottom:1px solid var(--rule-2);white-space:nowrap;
-  }
+  thead th{font-family:"Archivo",system-ui,sans-serif;font-size:11px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);background:var(--panel-2);border-bottom:1px solid var(--rule-2);white-space:nowrap}
   tbody tr:last-child td{border-bottom:none}
-  .num{
-    text-align:right;font-family:"JetBrains Mono",ui-monospace,monospace;
-    font-variant-numeric:tabular-nums;font-size:13.5px;white-space:nowrap;
-  }
+  .num{text-align:right;font-family:"JetBrains Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums;font-size:13.5px;white-space:nowrap}
   .lbl{font-family:"Archivo",system-ui,sans-serif;font-weight:500;font-size:13.5px;white-space:nowrap}
   .note{color:var(--ink-2);font-size:13.5px;line-height:1.5}
 
-  /* ledger specifics */
   tr.cat td{background:var(--panel-2);border-top:1px solid var(--rule-2)}
-  tr.cat .lbl{font-weight:700;letter-spacing:.01em}
-  tr.cat .num{font-weight:600;color:var(--ink)}
+  tr.cat .lbl{font-weight:700}
   tr.item td:first-child{padding-left:30px}
   tr.item .lbl{font-weight:400;white-space:normal;color:var(--ink)}
   tr.total td{background:var(--fiord-soft);border-top:2px solid var(--fiord);border-bottom:none}
@@ -153,112 +92,42 @@
   tr.total .num{font-weight:600;font-size:15.5px;color:var(--ink)}
   td.dash{color:var(--ink-3)}
 
-  .chip{
-    display:inline-block;font-family:"Archivo",system-ui,sans-serif;font-size:10.5px;
-    font-weight:600;letter-spacing:.05em;padding:2px 7px;border-radius:2px;white-space:nowrap;
-    vertical-align:1px;
+  /* 미입력 칸: 채워야 할 자리라는 걸 눈에 보이게 */
+  .blank{
+    display:inline-block;min-width:74px;height:1.35em;vertical-align:-.25em;
+    border-bottom:1.5px dashed color-mix(in srgb,var(--tussock) 55%,transparent);
   }
+  tr.open td{background:color-mix(in srgb,var(--tussock-soft) 55%,transparent)}
+
+  .chip{display:inline-block;font-family:"Archivo",system-ui,sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.05em;padding:2px 7px;border-radius:2px;white-space:nowrap;vertical-align:1px}
   .chip.ok{background:var(--moss-soft);color:var(--moss);border:1px solid color-mix(in srgb,var(--moss) 32%,transparent)}
-  .chip.est{background:var(--panel-2);color:var(--ink-2);border:1px solid var(--rule-2)}
-  .chip.chk{background:var(--tussock-soft);color:var(--tussock);border:1px solid color-mix(in srgb,var(--tussock) 34%,transparent)}
+  .chip.book{background:var(--fiord-soft);color:var(--fiord);border:1px solid color-mix(in srgb,var(--fiord) 30%,transparent)}
+  .chip.quote{background:var(--panel-2);color:var(--ink-2);border:1px solid var(--rule-2)}
+  .chip.open{background:var(--tussock-soft);color:var(--tussock);border:1px solid color-mix(in srgb,var(--tussock) 34%,transparent)}
 
-  /* ---------- bar figure ---------- */
-  figure{margin:26px 0 0}
-  figcaption{
-    font-family:"Archivo",system-ui,sans-serif;font-size:12.5px;color:var(--ink-3);
-    margin-top:12px;line-height:1.5;
-  }
-  .figtitle{
-    font-family:"Archivo",system-ui,sans-serif;font-size:13px;font-weight:600;
-    color:var(--ink-2);margin-bottom:14px;letter-spacing:.01em;
-  }
-  .bars{display:flex;flex-direction:column;gap:7px}
-  .barrow{
-    display:grid;grid-template-columns:132px minmax(0,1fr) 108px 52px;
-    align-items:center;gap:12px;padding:3px 4px;border-radius:2px;cursor:default;
-  }
-  .barrow:hover,.barrow:focus-visible{background:var(--panel-2);outline:none}
-  .barrow .bl{font-family:"Archivo",system-ui,sans-serif;font-size:12.5px;color:var(--ink-2);text-align:right}
-  .track{height:15px;background:var(--panel-2);border-radius:2px;overflow:hidden}
-  .fill{height:100%;background:var(--bar);border-radius:0 3px 3px 0;transition:opacity .12s ease}
-  .barrow:hover .fill{opacity:.82}
-  .barrow .bv{
-    font-family:"JetBrains Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums;
-    font-size:12.5px;text-align:right;color:var(--ink);
-  }
-  .barrow .bp{
-    font-family:"JetBrains Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums;
-    font-size:12px;text-align:right;color:var(--ink-3);
-  }
-  @media (max-width:640px){
-    .barrow{grid-template-columns:96px minmax(0,1fr) 92px;gap:9px}
-    .barrow .bp{display:none}
-  }
-
-  /* ---------- alt plan ---------- */
-  .split{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-  .card{
-    background:var(--panel);border:1px solid var(--rule);border-radius:3px;
-    padding:22px 24px;box-shadow:var(--shadow);
-  }
-  .card h3{
-    font-family:"Archivo",system-ui,sans-serif;font-size:15px;font-weight:600;
-    margin:0 0 4px;letter-spacing:-.005em;
-  }
-  .card .tag{
-    font-family:"Archivo",system-ui,sans-serif;font-size:11px;font-weight:600;
-    letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);
-  }
-  .card .big{
-    font-family:"JetBrains Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums;
-    font-size:26px;font-weight:600;letter-spacing:-.03em;margin:12px 0 2px;
-  }
-  .card .per{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:13px;color:var(--ink-2)}
-  .card ul{margin:14px 0 0;padding-left:18px;font-size:14.5px;color:var(--ink-2)}
-  .card li{margin:5px 0}
-  .card.picked{border-color:var(--fiord);border-width:1.5px}
-  .card.picked .tag{color:var(--fiord)}
-
-  /* ---------- checklist ---------- */
   ol.checks{margin:0;padding-left:0;list-style:none;counter-reset:c}
-  ol.checks li{
-    counter-increment:c;position:relative;padding:13px 0 13px 40px;
-    border-bottom:1px solid var(--rule);font-size:15px;
-  }
+  ol.checks li{counter-increment:c;position:relative;padding:13px 0 13px 40px;border-bottom:1px solid var(--rule);font-size:15px}
   ol.checks li:last-child{border-bottom:none}
-  ol.checks li::before{
-    content:counter(c);position:absolute;left:0;top:14px;
-    font-family:"JetBrains Mono",ui-monospace,monospace;font-size:11.5px;font-weight:600;
-    width:22px;height:22px;line-height:22px;text-align:center;border-radius:50%;
-    background:var(--tussock-soft);color:var(--tussock);
-  }
+  ol.checks li::before{content:counter(c);position:absolute;left:0;top:14px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:11.5px;font-weight:600;width:22px;height:22px;line-height:22px;text-align:center;border-radius:50%;background:var(--tussock-soft);color:var(--tussock)}
   ol.checks b{font-family:"Archivo",system-ui,sans-serif;font-weight:600;font-size:14.5px;color:var(--ink)}
 
-  .callout{
-    background:var(--tussock-soft);border-left:3px solid var(--tussock);
-    padding:16px 20px;border-radius:0 3px 3px 0;margin:0 0 24px;
-    font-size:15px;color:var(--ink);
-  }
+  .callout{background:var(--panel-2);border-left:3px solid var(--fiord);padding:16px 20px;border-radius:0 3px 3px 0;margin:0 0 24px;font-size:15px;color:var(--ink)}
   .callout b{font-family:"Archivo",system-ui,sans-serif;font-weight:600;font-size:14px}
 
-  footer{
-    margin-top:56px;padding-top:20px;border-top:1px solid var(--rule);
-    font-family:"Archivo",system-ui,sans-serif;font-size:12px;color:var(--ink-3);line-height:1.7;
-  }
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--rule);font-family:"Archivo",system-ui,sans-serif;font-size:12px;color:var(--ink-3);line-height:1.7}
   footer a{color:var(--fiord)}
-  a:focus-visible,.barrow:focus-visible{outline:2px solid var(--fiord);outline-offset:2px}
-  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+  a:focus-visible{outline:2px solid var(--fiord);outline-offset:2px}
 </style>
 
 <div class="shell">
 
   <header class="mast">
-    <div class="kicker">Nov 2026 · 견적 초안 v1</div>
+    <div class="kicker">Nov 2026 · 비용 정리 v2</div>
     <h1>시드니 2박 + 뉴질랜드 남섬 5박</h1>
-    <p class="dek">2026년 11월 21일 ~ 11월 30일, 성인 2명. 남섬 구간은 한인 가이드 패키지(숙박·차량·식사 포함)로 묶고, 시드니 앞뒤와 퀸스타운 자유 1박만 개별로 잡는 구성이에요.</p>
+    <p class="dek">2026년 11월 21일(토) ~ 11월 30일(월), 성인 2명. 남섬은 크라이스트처치로 들어가 퀸스타운으로 나오는 패키지 종주. 금액은 실제로 확인된 것만 채웠고, 나머지는 빈칸으로 뒀어요.</p>
     <div class="mast-meta">
-      <span>적용 환율 <b>NZD 830원 · AUD 990원</b></span>
-      <span>기준일 <b>2026-08-29</b></span>
+      <span>숙박 <b>8박</b> + 기내 <b>1박</b></span>
+      <span>총 <b>9박 10일</b></span>
       <span>인원 <b>성인 2명</b></span>
     </div>
   </header>
@@ -273,11 +142,11 @@
       <table>
         <thead><tr><th style="width:150px">구분</th><th>내용</th></tr></thead>
         <tbody>
-          <tr><td class="lbl">여행 정보</td><td class="note">시드니 2박 + 뉴질랜드 남섬 5박 (남섬은 크라이스트처치 IN / 퀸스타운 OUT 편도 종주)</td></tr>
-          <tr><td class="lbl">여행 기간</td><td class="note">26년 11월 21일(토) ~ 11월 30일(월) · 총 8박 10일 (기내 1박 포함)</td></tr>
+          <tr><td class="lbl">여행 정보</td><td class="note">시드니 2박 + 뉴질랜드 남섬 5박 (패키지 4박 + 퀸스타운 자유 1박) + 시드니 1박</td></tr>
+          <tr><td class="lbl">여행 기간</td><td class="note">26년 11월 21일(토) ~ 11월 30일(월) · <b>9박 10일</b> — 호텔 8박, 귀국편 기내 1박</td></tr>
           <tr><td class="lbl">여행 인원</td><td class="note">성인 2명</td></tr>
-          <tr><td class="lbl">여행 비용</td><td class="note"><b>1인 기준 405만원, 2인 합계 810만원</b> — 인천·시드니 왕복 대한항공 비즈니스 항공권은 별도 확정분이라 이 금액에 포함하지 않았어요.</td></tr>
-          <tr><td class="lbl">특이사항</td><td class="note">① 인천–시드니 KE401/402는 비즈니스로 이미 발권 완료된 별도 티켓 · ② 남섬 5일은 (주)섬나라여행 「남섬 품격 4박5일」 패키지로 숙박 4박·전용차량·한국인 가이드·식사 대부분 포함 · ③ 렌터카 불필요 · ④ 패키지 최소 출발인원이 5명이라 <b>2인 단독 진행 가능 여부가 최대 변수</b></td></tr>
+          <tr><td class="lbl">여행 비용</td><td class="note">요금이 확인된 항목만 합산해 <b>2인 1,615,604원</b>(젯스타 조회 요금). 나머지 <b>11개 항목이 미입력</b> 상태예요.</td></tr>
+          <tr><td class="lbl">특이사항</td><td class="note">① 인천–시드니 KE401/402는 비즈니스로 발권 완료된 별도 티켓 · ② 남섬 4박은 (주)섬나라여행 「남섬 품격 4박5일」 패키지로 숙박·전용차량·한국인 가이드·식사 대부분 포함 · ③ 렌터카 불필요 · ④ 남섬은 <b>크라이스트처치 IN / 퀸스타운 OUT</b> 편도 종주라 시드니–CHC, ZQN–시드니 두 구간을 새로 발권해야 함 · ⑤ 패키지 최소 출발인원 5명 — 2인 단독 진행 가능 여부 확인 필요</td></tr>
         </tbody>
       </table>
     </div>
@@ -288,22 +157,34 @@
     <div class="sec-head">
       <span class="sec-num">01</span>
       <h2>여행루트</h2>
-      <span class="sec-note">숙박 8박 기준</span>
+      <span class="sec-note">호텔 8박 + 기내 1박</span>
     </div>
     <div class="scroll">
       <table>
         <thead>
-          <tr><th style="width:140px">도시</th><th style="width:80px">일정</th><th style="width:110px">이동</th><th>내용</th></tr>
+          <tr><th style="width:150px">도시</th><th style="width:66px">일정</th><th style="width:132px">날짜</th><th style="width:118px">이동</th><th>내용</th></tr>
         </thead>
         <tbody>
-          <tr><td class="lbl">시드니</td><td class="lbl">2박</td><td class="lbl">항공</td><td class="note">인천–시드니 KE401 (대한항공 비즈니스) · 11/21 20:05 도착 → 서리힐스 ADGE Hotel 체크인. 11/22 오페라하우스·하버브릿지·본다이비치.</td></tr>
-          <tr><td class="lbl">크라이스트처치</td><td class="lbl">1박</td><td class="lbl">항공</td><td class="note">시드니–크라이스트처치 JQ141 (젯스타) 11/23 12:30→17:40 · 20:00 공항 미팅으로 패키지 시작.</td></tr>
-          <tr><td class="lbl">오마라마</td><td class="lbl">1박</td><td class="lbl">패키지 차량</td><td class="note">테카포 호수 · 마운트쿡(후커밸리·키아포인트 트래킹) 경유. 약 11시간 이동일.</td></tr>
-          <tr><td class="lbl">테아나우</td><td class="lbl">1박</td><td class="lbl">패키지 차량</td><td class="note">린디스패스·크롬웰·카와라우 다리 경유, 퀸스타운 스카이라인 곤돌라 + 시내 자유시간 후 테아나우 이동.</td></tr>
-          <tr><td class="lbl">퀸스타운</td><td class="lbl">1박</td><td class="lbl">패키지 차량</td><td class="note">밀포드사운드 당일 왕복 · 11:15 크루즈(1시간45분, 선상 뷔페) 후 퀸스타운 입성.</td></tr>
-          <tr><td class="lbl">퀸스타운</td><td class="lbl">1박</td><td class="lbl">도보·택시</td><td class="note">11/27 오전 애로우타운 산책 후 패키지 종료(10:30). 자유 1박 — 저녁 Onsen Hot Pools 프라이빗 온천.</td></tr>
-          <tr><td class="lbl">시드니</td><td class="lbl">1박</td><td class="lbl">항공</td><td class="note">퀸스타운–시드니 JQ224 (젯스타) 11/28 20:50→22:10 · 공항 인근 숙소.</td></tr>
-          <tr><td class="lbl">(기내)</td><td class="lbl">1박</td><td class="lbl">항공</td><td class="note">11/29 시드니 자유시간 후 KE402 21:55 출발 → 11/30 06:35 인천 도착.</td></tr>
+          <tr>
+            <td class="lbl">시드니</td><td class="lbl">2박</td><td class="lbl">11/21(토)–23(월)</td><td class="lbl">항공</td>
+            <td class="note">KE401 인천→시드니, 11/21 20:05 도착 → ADGE Hotel(서리힐스) 체크인. 11/22 오페라하우스·하버브릿지·본다이비치.</td>
+          </tr>
+          <tr>
+            <td class="lbl">남섬 패키지</td><td class="lbl">4박</td><td class="lbl">11/23(월)–27(금)</td><td class="lbl">항공 + 패키지 차량</td>
+            <td class="note">JQ141 시드니→크라이스트처치 12:30→17:40 <b>(발권 필요)</b>, 20:00 공항 미팅으로 시작. <b>크라이스트처치 1박 → 오마라마 1박</b>(테카포·마운트쿡) <b>→ 테아나우 1박</b>(퀸스타운 경유) <b>→ 퀸스타운 1박</b>(밀포드사운드 크루즈). 11/27 오전 애로우타운 후 10:30 종료.</td>
+          </tr>
+          <tr>
+            <td class="lbl">퀸스타운</td><td class="lbl">1박</td><td class="lbl">11/27(금)–28(토)</td><td class="lbl">도보·택시</td>
+            <td class="note"><b>직접 예약해야 하는 1박.</b> 패키지 종료 후 자유일 — 저녁 Onsen Hot Pools 프라이빗 온천.</td>
+          </tr>
+          <tr>
+            <td class="lbl">시드니</td><td class="lbl">1박</td><td class="lbl">11/28(토)–29(일)</td><td class="lbl">항공</td>
+            <td class="note">JQ224 퀸스타운→시드니 20:50→22:10 도착 <b>(발권 필요)</b>. <b>직접 예약해야 하는 1박</b> — 늦은 도착이라 공항 인근.</td>
+          </tr>
+          <tr>
+            <td class="lbl">(기내)</td><td class="lbl">1박</td><td class="lbl">11/29(일)–30(월)</td><td class="lbl">항공</td>
+            <td class="note">11/29 낮 시드니 자유시간 → KE402 21:55 출발 → <b>11/30(월) 06:35 인천 도착.</b></td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -313,213 +194,176 @@
   <section>
     <div class="sec-head">
       <span class="sec-num">02</span>
-      <h2>여행 전 예약분 + 현지 사용 총 비용</h2>
-      <span class="sec-note">2026-08 환율 기준</span>
+      <h2>비용</h2>
+      <span class="sec-note">확인된 금액만 합산</span>
+    </div>
+
+    <div class="callout">
+      <b>이 표의 규칙 — 추정치는 넣지 않습니다.</b><br>
+      실제로 예약했거나 요금이 확인된 항목만 숫자를 채웠어요. 나머지는 <span class="chip open">미입력</span>으로 두고 비고에 "어디서 확인하면 되는지"만 적어뒀습니다. 그래야 합계가 늘어날 때마다 그 숫자를 그대로 믿을 수 있어요.
     </div>
 
     <div class="figures">
       <div class="fig lead">
-        <div class="fig-label">총합계 · 2인</div>
-        <div class="fig-val">8,099,054원</div>
-        <div class="fig-sub">인천–시드니 왕복 비즈니스 제외</div>
+        <div class="fig-label">확인된 요금 · 2인</div>
+        <div class="fig-val">1,615,604원</div>
+        <div class="fig-sub">젯스타 항공권 + 수하물 · 아직 발권 전</div>
       </div>
       <div class="fig">
         <div class="fig-label">1인 기준</div>
-        <div class="fig-val">4,049,527원</div>
-        <div class="fig-sub">숙박 8박 · 식비 · 현지 교통 포함</div>
+        <div class="fig-val">807,802원</div>
+        <div class="fig-sub">조회 요금 기준</div>
       </div>
-      <div class="fig">
-        <div class="fig-label">예약 확정분</div>
-        <div class="fig-val">1,626,804원</div>
-        <div class="fig-sub">젯스타 2구간 + 위탁수하물 (2인)</div>
-      </div>
-      <div class="fig">
-        <div class="fig-label">미확정 최대 변수</div>
-        <div class="fig-val">3,400,000원</div>
-        <div class="fig-sub">남섬 패키지 2인 · 요금 확인 필요</div>
+      <div class="fig warn">
+        <div class="fig-label">미입력 항목</div>
+        <div class="fig-val">11건</div>
+        <div class="fig-sub">아래 표의 빈칸 — 채우면 합계가 완성돼요</div>
       </div>
     </div>
 
-    <p class="lede"><span class="chip ok">확정</span> 실제 예약·발권된 금액 &nbsp; <span class="chip est">추정</span> 시세 기반 예산 &nbsp; <span class="chip chk">확인필요</span> 예약 전에 반드시 확인할 항목</p>
+    <p class="lede">
+      <span class="chip book">예약완료</span> 예약은 끝, 금액만 입력 &nbsp;
+      <span class="chip quote">조회요금</span> 요금은 확인, 아직 결제 전 &nbsp;
+      <span class="chip open">미입력</span> 아직 확인 전
+    </p>
 
     <div class="scroll">
       <table>
         <thead>
           <tr>
-            <th style="width:210px">구분</th>
-            <th style="width:150px">구매처</th>
-            <th class="num" style="width:118px">비용 (1인)</th>
-            <th class="num" style="width:118px">비용 (2인)</th>
+            <th style="width:230px">구분</th>
+            <th style="width:140px">구매처</th>
+            <th class="num" style="width:110px">비용 (1인)</th>
+            <th class="num" style="width:110px">비용 (2인)</th>
             <th>비고</th>
           </tr>
         </thead>
         <tbody>
           <tr class="total">
-            <td class="lbl">총합계</td><td></td>
-            <td class="num">4,049,527</td><td class="num">8,099,054</td>
-            <td class="note">KE401/402 비즈니스 제외</td>
+            <td class="lbl">확인된 요금 합계</td><td></td>
+            <td class="num">807,802</td><td class="num">1,615,604</td>
+            <td class="note">미입력 11건 제외 · 결제 완료분 아님</td>
           </tr>
 
-          <tr class="cat"><td class="lbl">항공권</td><td></td><td class="num">813,402</td><td class="num">1,626,804</td><td class="note"></td></tr>
-          <tr class="item"><td class="lbl">인천–시드니–인천 KE401/402 (비즈니스)</td><td class="lbl">대한항공</td><td class="num dash">별도 확정</td><td class="num dash">—</td><td class="note">이미 발권된 별도 티켓. 실결제액(또는 마일리지 공제분)만 채워 넣으면 총액 완성.</td></tr>
-          <tr class="item"><td class="lbl">시드니–크라이스트처치 JQ141 + 퀸스타운–시드니 JQ224</td><td class="lbl">젯스타 공홈</td><td class="num">674,802</td><td class="num">1,349,604</td><td class="note"><span class="chip ok">확정</span> 다구간 2구간 합산 요금</td></tr>
-          <tr class="item"><td class="lbl">위탁수하물 15kg × 2인 × 2구간</td><td class="lbl">젯스타 공홈</td><td class="num">138,600</td><td class="num">277,200</td><td class="note">AU$70 × 4 · <b>온라인 사전구매 필수</b> (공항 구매 시 AU$175로 2.5배)</td></tr>
+          <tr class="cat"><td class="lbl">항공권</td><td></td><td class="num">807,802</td><td class="num">1,615,604</td><td class="note"></td></tr>
+          <tr class="open">
+            <td class="lbl" style="padding-left:30px;white-space:normal;font-weight:400">인천–시드니–인천 KE401/402 (비즈니스)</td>
+            <td class="lbl">대한항공</td>
+            <td class="num"><span class="blank"></span></td><td class="num"><span class="blank"></span></td>
+            <td class="note"><span class="chip book">예약완료</span> 발권 완료된 별도 티켓 — 결제 내역의 실금액(또는 마일리지 공제분) 입력</td>
+          </tr>
+          <tr class="item">
+            <td class="lbl">시드니–크라이스트처치 JQ141<br>＋ 퀸스타운–시드니 JQ224</td>
+            <td class="lbl">젯스타 공홈</td>
+            <td class="num">674,802</td><td class="num">1,349,604</td>
+            <td class="note"><span class="chip quote">조회요금</span> 다구간 2구간 합산 · <b>아직 발권 전</b> — 패키지 확정 후 발권</td>
+          </tr>
+          <tr class="item">
+            <td class="lbl">위탁수하물 15kg (1인 1개, 왕복)</td>
+            <td class="lbl">젯스타 공홈</td>
+            <td class="num">133,000</td><td class="num">266,000</td>
+            <td class="note"><span class="chip quote">조회요금</span> 온라인 사전구매 AU$70 · <b>공항에서 사면 AU$175로 2.5배</b> — 항공권 예약할 때 같이 추가</td>
+          </tr>
 
-          <tr class="cat"><td class="lbl">패키지</td><td></td><td class="num">1,700,000</td><td class="num">3,400,000</td><td class="note"></td></tr>
-          <tr class="item"><td class="lbl">남섬 품격 4박5일 (11/23–27)</td><td class="lbl">마이리얼트립 #3795728</td><td class="num">1,700,000</td><td class="num">3,400,000</td><td class="note"><span class="chip chk">확인필요</span> 동일 업체 자매상품(East Coast 4박5일) 168~177만원대를 근거로 한 추정. 숙박 4박·전용차량·한국인 가이드·밀포드 크루즈·곤돌라·식사 대부분 포함, 2인 1실 기준 싱글차지 없음.</td></tr>
+          <tr class="cat"><td class="lbl">패키지</td><td></td><td class="num dash">—</td><td class="num dash">—</td><td class="note"></td></tr>
+          <tr class="open">
+            <td class="lbl" style="padding-left:30px;white-space:normal;font-weight:400">남섬 품격 4박5일 (11/23–27)</td>
+            <td class="lbl">마이리얼트립<br>#3795728</td>
+            <td class="num"><span class="blank"></span></td><td class="num"><span class="blank"></span></td>
+            <td class="note"><span class="chip open">미입력</span> 상품 페이지 요금 확인 후 입력. 숙박 4박·전용차량·한국인 가이드·밀포드 크루즈·스카이라인 곤돌라·식사 대부분 포함, 2인 1실 기준.</td>
+          </tr>
 
-          <tr class="cat"><td class="lbl">비자</td><td></td><td class="num">116,910</td><td class="num">233,820</td><td class="note"></td></tr>
-          <tr class="item"><td class="lbl">뉴질랜드 NZeTA + 관광세(IVL)</td><td class="lbl">NZeTA 공식 앱</td><td class="num">97,110</td><td class="num">194,220</td><td class="note">NZ$17(앱) + NZ$100 · 웹 신청 시 NZ$23으로 조금 더 비쌈</td></tr>
-          <tr class="item"><td class="lbl">호주 ETA (subclass 601)</td><td class="lbl">Australian ETA 앱</td><td class="num">19,800</td><td class="num">39,600</td><td class="note">AU$20 · 앱으로만 신청 가능, 대한민국 여권 대상</td></tr>
+          <tr class="cat"><td class="lbl">숙소</td><td></td><td class="num dash">—</td><td class="num dash">—</td><td class="note">패키지 4박 제외한 4박분</td></tr>
+          <tr class="open">
+            <td class="lbl" style="padding-left:30px;white-space:normal;font-weight:400">시드니 ADGE Hotel 2박 (11/21–23)</td>
+            <td class="lbl">아고다<br>#1765475919</td>
+            <td class="num"><span class="blank"></span></td><td class="num"><span class="blank"></span></td>
+            <td class="note"><span class="chip book">예약완료</span> 아고다 예약 내역의 실결제액 입력</td>
+          </tr>
+          <tr class="item">
+            <td class="lbl">남섬 4박 (11/23–27)</td>
+            <td class="lbl">패키지 포함</td>
+            <td class="num dash">—</td><td class="num dash">—</td>
+            <td class="note">Heritage Gateway → Distinction Luxmore → Copthorne Lakefront 급</td>
+          </tr>
+          <tr class="open">
+            <td class="lbl" style="padding-left:30px;white-space:normal;font-weight:400">퀸스타운 1박 (11/27–28)</td>
+            <td class="lbl">미예약</td>
+            <td class="num"><span class="blank"></span></td><td class="num"><span class="blank"></span></td>
+            <td class="note"><span class="chip open">미입력</span> 직접 예약해야 하는 1박</td>
+          </tr>
+          <tr class="open">
+            <td class="lbl" style="padding-left:30px;white-space:normal;font-weight:400">시드니 공항 인근 1박 (11/28–29)</td>
+            <td class="lbl">미예약</td>
+            <td class="num"><span class="blank"></span></td><td class="num"><span class="blank"></span></td>
+            <td class="note"><span class="chip open">미입력</span> JQ224가 22:10 도착이라 공항 인근으로</td>
+          </tr>
 
-          <tr class="cat"><td class="lbl">유심</td><td></td><td class="num">40,000</td><td class="num">80,000</td><td class="note"></td></tr>
-          <tr class="item"><td class="lbl">호주 + 뉴질랜드 eSIM (10일)</td><td class="lbl">네이버 스마트스토어 등</td><td class="num">40,000</td><td class="num">80,000</td><td class="note">밀포드 로드는 구간별로 신호가 약해질 수 있음</td></tr>
+          <tr class="cat"><td class="lbl">비자</td><td></td><td class="num dash">—</td><td class="num dash">—</td><td class="note"></td></tr>
+          <tr class="open">
+            <td class="lbl" style="padding-left:30px;white-space:normal;font-weight:400">뉴질랜드 NZeTA + 관광세(IVL)</td>
+            <td class="lbl">NZeTA 공식 앱</td>
+            <td class="num"><span class="blank"></span></td><td class="num"><span class="blank"></span></td>
+            <td class="note"><span class="chip open">미입력</span> 공식 고시 요금 NZ$17(앱)·NZ$23(웹) + IVL NZ$100 — 결제 후 원화 실금액 입력</td>
+          </tr>
+          <tr class="open">
+            <td class="lbl" style="padding-left:30px;white-space:normal;font-weight:400">호주 ETA (subclass 601)</td>
+            <td class="lbl">Australian ETA 앱</td>
+            <td class="num"><span class="blank"></span></td><td class="num"><span class="blank"></span></td>
+            <td class="note"><span class="chip open">미입력</span> 공식 고시 요금 AU$20 — 결제 후 원화 실금액 입력</td>
+          </tr>
 
-          <tr class="cat"><td class="lbl">보험</td><td></td><td class="num">60,000</td><td class="num">120,000</td><td class="note"></td></tr>
-          <tr class="item"><td class="lbl">해외여행자보험 10일</td><td class="lbl">마이뱅크 등 비교사이트</td><td class="num">60,000</td><td class="num">120,000</td><td class="note">트래킹·크루즈 포함 일정이라 상해 담보 확인</td></tr>
+          <tr class="cat"><td class="lbl">현지 예약</td><td></td><td class="num dash">—</td><td class="num dash">—</td><td class="note"></td></tr>
+          <tr class="open">
+            <td class="lbl" style="padding-left:30px;white-space:normal;font-weight:400">Onsen Hot Pools 프라이빗 온천 (11/27 저녁)</td>
+            <td class="lbl">공홈 사전예약</td>
+            <td class="num"><span class="blank"></span></td><td class="num"><span class="blank"></span></td>
+            <td class="note"><span class="chip open">미입력</span> 시간대별로 요금이 달라서 예약할 때 확정됨 · 인기 많아 미리 예약</td>
+          </tr>
 
-          <tr class="cat"><td class="lbl">숙소</td><td></td><td class="num">485,850</td><td class="num">971,700</td><td class="note">패키지 4박 제외한 4박분</td></tr>
-          <tr class="item"><td class="lbl">시드니 ADGE Hotel 2박 (11/21–23)</td><td class="lbl">아고다 #1765475919</td><td class="num">272,250</td><td class="num">544,500</td><td class="note"><span class="chip ok">예약완료</span> <span class="chip chk">확인필요</span> 서리힐스 시세(AU$275/박) 기준 추정 — 실결제액으로 교체 필요</td></tr>
-          <tr class="item"><td class="lbl">크라이스트처치·오마라마·테아나우·퀸스타운 4박 (11/23–27)</td><td class="lbl">패키지 포함</td><td class="num dash">—</td><td class="num dash">—</td><td class="note">Heritage Gateway → Distinction Luxmore → Copthorne Lakefront 급</td></tr>
-          <tr class="item"><td class="lbl">퀸스타운 추가 1박 (11/27)</td><td class="lbl">미예약</td><td class="num">124,500</td><td class="num">249,000</td><td class="note"><span class="chip est">추정</span> NZ$300 · 11월 평균 NZ$153이지만 성수기 진입 + 레이크프론트 기준으로 잡음</td></tr>
-          <tr class="item"><td class="lbl">시드니 공항 인근 1박 (11/28)</td><td class="lbl">미예약</td><td class="num">89,100</td><td class="num">178,200</td><td class="note"><span class="chip est">추정</span> AU$180 · JQ224가 22:10 도착이라 공항 인근이 합리적</td></tr>
-
-          <tr class="cat"><td class="lbl">현지 사용</td><td></td><td class="num">683,365</td><td class="num">1,366,730</td><td class="note">카드(트래블월렛 등) + 현금 일부</td></tr>
-          <tr class="item"><td class="lbl">Onsen Hot Pools 프라이빗 1시간</td><td class="lbl">공홈 사전예약</td><td class="num">72,625</td><td class="num">145,250</td><td class="note">NZ$175 (2인 1풀, 저녁 시간대) · 인기 많아 미리 예약</td></tr>
-          <tr class="item"><td class="lbl">하버브릿지 파일런 룩아웃</td><td class="lbl">현장</td><td class="num">29,205</td><td class="num">58,410</td><td class="note">AU$29.5 · 오페라하우스 외부·본다이비치는 무료</td></tr>
-          <tr class="item"><td class="lbl">시드니 교통 (오팔카드·공항철도·택시)</td><td class="lbl">현지</td><td class="num">105,435</td><td class="num">210,870</td><td class="note">AU$213 · 공항철도 편도 AU$22 × 왕복 2회 + 시내 일일상한 2일</td></tr>
-          <tr class="item"><td class="lbl">퀸스타운 교통 (온천 왕복 택시)</td><td class="lbl">현지</td><td class="num">16,600</td><td class="num">33,200</td><td class="note">NZ$40 · 나머지 구간은 전부 패키지 차량</td></tr>
-          <tr class="item"><td class="lbl">식비 — 시드니 (11/21·22·28·29)</td><td class="lbl">현지</td><td class="num">326,700</td><td class="num">653,400</td><td class="note">AU$660 · 8끼 + 카페·간식, 1끼 2인 AU$70 기준</td></tr>
-          <tr class="item"><td class="lbl">식비 — 퀸스타운 자유일 (11/27)</td><td class="lbl">현지</td><td class="num">99,600</td><td class="num">199,200</td><td class="note">NZ$240 · 점심·저녁 2끼 (패키지 조식 포함)</td></tr>
-          <tr class="item"><td class="lbl">가이드·기사 팁</td><td class="lbl">현지 현금</td><td class="num">33,200</td><td class="num">66,400</td><td class="note">NZ$80 · 4일간 관례 수준</td></tr>
-
-          <tr class="cat"><td class="lbl">기타</td><td></td><td class="num">150,000</td><td class="num">300,000</td><td class="note"></td></tr>
-          <tr class="item"><td class="lbl">기념품 · 예비비</td><td class="lbl">—</td><td class="num">150,000</td><td class="num">300,000</td><td class="note">총액의 약 4% 버퍼</td></tr>
+          <tr class="cat"><td class="lbl">기타</td><td></td><td class="num dash">—</td><td class="num dash">—</td><td class="note"></td></tr>
+          <tr class="open">
+            <td class="lbl" style="padding-left:30px;white-space:normal;font-weight:400">유심 · eSIM (호주+뉴질랜드)</td>
+            <td class="lbl">미구매</td>
+            <td class="num"><span class="blank"></span></td><td class="num"><span class="blank"></span></td>
+            <td class="note"><span class="chip open">미입력</span> 밀포드 로드는 구간별로 신호가 약해질 수 있음</td>
+          </tr>
+          <tr class="open">
+            <td class="lbl" style="padding-left:30px;white-space:normal;font-weight:400">해외여행자보험 10일</td>
+            <td class="lbl">미가입</td>
+            <td class="num"><span class="blank"></span></td><td class="num"><span class="blank"></span></td>
+            <td class="note"><span class="chip open">미입력</span> 트래킹·크루즈 포함이라 상해 담보 확인</td>
+          </tr>
+          <tr class="open">
+            <td class="lbl" style="padding-left:30px;white-space:normal;font-weight:400">현지 식비 · 교통 · 환전</td>
+            <td class="lbl">현지</td>
+            <td class="num"><span class="blank"></span></td><td class="num"><span class="blank"></span></td>
+            <td class="note"><span class="chip open">미입력</span> 패키지 외 식사는 시드니 4일치 + 퀸스타운 자유일 1일치. 예산 정하면 입력</td>
+          </tr>
         </tbody>
       </table>
     </div>
-
-    <figure>
-      <div class="figtitle">항목별 비중 — 2인 합계 8,099,054원</div>
-      <div class="bars" id="bars">
-        <div class="barrow" tabindex="0" data-name="남섬 패키지" data-val="3,400,000원" data-pct="42.0%">
-          <span class="bl">남섬 패키지</span><span class="track"><span class="fill" style="width:100%"></span></span>
-          <span class="bv">3,400,000</span><span class="bp">42.0%</span>
-        </div>
-        <div class="barrow" tabindex="0" data-name="항공권 (젯스타)" data-val="1,626,804원" data-pct="20.1%">
-          <span class="bl">항공권 (젯스타)</span><span class="track"><span class="fill" style="width:47.8%"></span></span>
-          <span class="bv">1,626,804</span><span class="bp">20.1%</span>
-        </div>
-        <div class="barrow" tabindex="0" data-name="현지 사용" data-val="1,366,730원" data-pct="16.9%">
-          <span class="bl">현지 사용</span><span class="track"><span class="fill" style="width:40.2%"></span></span>
-          <span class="bv">1,366,730</span><span class="bp">16.9%</span>
-        </div>
-        <div class="barrow" tabindex="0" data-name="숙소" data-val="971,700원" data-pct="12.0%">
-          <span class="bl">숙소</span><span class="track"><span class="fill" style="width:28.6%"></span></span>
-          <span class="bv">971,700</span><span class="bp">12.0%</span>
-        </div>
-        <div class="barrow" tabindex="0" data-name="기타·예비비" data-val="300,000원" data-pct="3.7%">
-          <span class="bl">기타·예비비</span><span class="track"><span class="fill" style="width:8.8%"></span></span>
-          <span class="bv">300,000</span><span class="bp">3.7%</span>
-        </div>
-        <div class="barrow" tabindex="0" data-name="비자" data-val="233,820원" data-pct="2.9%">
-          <span class="bl">비자</span><span class="track"><span class="fill" style="width:6.9%"></span></span>
-          <span class="bv">233,820</span><span class="bp">2.9%</span>
-        </div>
-        <div class="barrow" tabindex="0" data-name="보험" data-val="120,000원" data-pct="1.5%">
-          <span class="bl">보험</span><span class="track"><span class="fill" style="width:3.5%"></span></span>
-          <span class="bv">120,000</span><span class="bp">1.5%</span>
-        </div>
-        <div class="barrow" tabindex="0" data-name="유심" data-val="80,000원" data-pct="1.0%">
-          <span class="bl">유심</span><span class="track"><span class="fill" style="width:2.4%"></span></span>
-          <span class="bv">80,000</span><span class="bp">1.0%</span>
-        </div>
-      </div>
-      <figcaption>패키지 하나가 전체의 42%예요. 이 금액이 확정되면 총액의 정확도가 사실상 결정됩니다.</figcaption>
-    </figure>
   </section>
 
   <!-- 3 -->
   <section>
     <div class="sec-head">
       <span class="sec-num">03</span>
-      <h2>대안 비교 — 패키지 vs 퀸스타운 베이스</h2>
-    </div>
-    <div class="callout">
-      <b>일정이 두 갈래로 나뉘어 있어요.</b><br>
-      보내주신 표는 <b>퀸스타운에 5박 머물며 데이투어로 다니는 안</b>이고, 링크된 일정표는 <b>크라이스트처치로 들어가 남섬을 종주하는 패키지 안</b>이에요. 링크 쪽이 항공편·호텔 예약번호까지 확정된 최신본이라 위 견적은 패키지 기준으로 잡고, 아래에 표 기준 비용도 함께 계산했어요.
-    </div>
-    <div class="split">
-      <div class="card picked">
-        <div class="tag">A안 · 링크 일정 (확정)</div>
-        <h3>남섬 종주 패키지</h3>
-        <div class="big">8,099,054원</div>
-        <div class="per">1인 4,049,527원</div>
-        <ul>
-          <li>테카포·마운트쿡·밀포드사운드까지 남섬을 가로지름</li>
-          <li>숙박·차량·가이드·식사 대부분 포함이라 현지 변수 적음</li>
-          <li>이동 시간이 길고(하루 10~11시간) 자유시간이 적음</li>
-          <li>최소 5명 조건이 걸림 — 2인 단독 가능 여부가 관건</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="tag">B안 · 보내주신 표</div>
-        <h3>퀸스타운 베이스 + 데이투어</h3>
-        <div class="big">약 7,900,000원</div>
-        <div class="per">1인 약 3,950,000원 · A안 대비 −20만원</div>
-        <ul>
-          <li>퀸스타운 5박 고정, 글레노키·밀포드·와나카 데이투어 3건 + 택1</li>
-          <li>숙소 5박 124.5만 · 투어 4건 142.3만 · 식비 99.6만 (2인)</li>
-          <li>매일 숙소를 옮기지 않아 여유롭고 일정 조정이 자유로움</li>
-          <li>테카포·마운트쿡은 못 봄, 식사·투어 예약을 직접 해야 함</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4 -->
-  <section>
-    <div class="sec-head">
-      <span class="sec-num">04</span>
-      <h2>이 견적을 확정하려면</h2>
-      <span class="sec-note">위에서부터 순서대로</span>
+      <h2>빈칸을 채우는 순서</h2>
+      <span class="sec-note">위에서부터</span>
     </div>
     <ol class="checks">
-      <li><b>패키지 실제 요금과 2인 단독 진행 가능 여부</b><br>최소 출발인원이 5명이에요. 2인만으로 진행 가능한지, 가능하다면 추가금이 붙는지 확인해야 총액의 42%가 확정됩니다. 여기서 답이 안 되면 B안으로 갈아탈 준비를 해두세요.</li>
-      <li><b>JQ141 17:40 도착으로 20:00 픽업에 합류 가능한지</b><br>같은 날 미팅이라 패키지사 확인이 필요해요. 확인 후에 항공권을 발권하는 순서가 안전합니다.</li>
-      <li><b>시드니 ADGE Hotel 실결제액</b><br>예약(아고다 #1765475919)은 끝났으니 실제 금액만 넣으면 추정치 54.4만원을 대체할 수 있어요.</li>
-      <li><b>KE401/402 비즈니스 실결제액</b><br>이 표에 빠져 있는 유일한 큰 항목이에요. 현금가든 마일리지 공제분이든 넣어야 진짜 총액이 나옵니다.</li>
-      <li><b>시드니 마지막 숙박은 1박인지 2박인지</b><br>11/28 22:10 도착 → 11/29 21:55 출국이면 1박이면 충분해서 1박으로 잡았어요. 링크 일정표에는 2박으로 적혀 있어서, 늦은 체크아웃이나 데이유즈가 필요하면 약 17.8만원이 추가됩니다.</li>
+      <li><b>남섬 패키지 요금 + 2인 단독 진행 가능 여부</b><br>최소 출발인원이 5명이에요. 2인만으로 진행되는지, 추가금이 붙는지부터 확인해야 요금이 확정됩니다. 이게 가장 큰 금액이라 여기부터 채우는 게 맞아요.</li>
+      <li><b>JQ141 17:40 도착으로 20:00 픽업에 합류 가능한지</b><br>패키지사 확인 후에 항공권 발권 — 순서가 바뀌면 곤란해집니다.</li>
+      <li><b>젯스타 다구간 발권 — 시드니→CHC, ZQN→시드니</b><br>남섬을 크라이스트처치로 들어가 퀸스타운으로 나오는 코스라 두 구간을 새로 끊어야 해요. 다구간으로 한 번에 예약하고, 위탁수하물도 그 자리에서 같이 추가하세요. 발권 후 실결제액으로 조회 요금을 교체.</li>
+      <li><b>이미 결제한 두 건의 실금액</b><br>KE401/402 비즈니스, 시드니 ADGE Hotel 2박. 결제 내역만 옮겨 적으면 되는 항목이에요.</li>
+      <li><b>직접 예약할 숙소 2건</b><br>퀸스타운 1박(11/27), 시드니 공항 인근 1박(11/28). 예약하면서 금액 확정.</li>
+      <li><b>비자 2건 · Onsen · 유심 · 보험</b><br>결제 시점에 원화 금액이 나오니 그때 채우면 됩니다.</li>
     </ol>
   </section>
 
   <footer>
-    가격 근거 · 젯스타 요금과 수하물, 패키지 일정은 기존 일정표 기준 / NZeTA·IVL은 <a href="https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/fees-processing-times-and-refunds/paying-the-international-visitor-levy/">뉴질랜드 이민성</a> / Onsen Hot Pools는 <a href="https://www.onsen.co.nz/">공식 요금표</a> / 퀸스타운·시드니 숙박 시세와 데이투어 요금은 2026년 8월 기준 공개 시세.<br>
-    환율은 2026년 8월 중순 기준 NZD 830원 · AUD 990원을 일괄 적용했어요. 실제 결제 시점 환율과 카드 수수료에 따라 3~5% 차이가 날 수 있습니다.
+    금액 출처 · 젯스타 항공권과 위탁수하물은 기존 일정표에 기재된 조회 요금(미발권). 나머지는 실제 예약·결제 후 채워 넣는 칸으로 비워뒀습니다.<br>
+    비고의 NZ$·AU$ 표기는 각 기관이 고시한 공식 요금이며, 원화 환산액은 결제 시점 환율과 카드 수수료에 따라 달라집니다.
   </footer>
 </div>
-
-<script>
-(function(){
-  var tip=document.createElement("div");
-  tip.style.cssText="position:fixed;z-index:99;pointer-events:none;opacity:0;transition:opacity .1s ease;"+
-    "background:var(--panel);color:var(--ink);border:1px solid var(--rule-2);border-radius:3px;"+
-    "padding:7px 10px;font-family:'Archivo',system-ui,sans-serif;font-size:12px;line-height:1.5;"+
-    "box-shadow:0 6px 20px -8px rgba(0,0,0,.4);white-space:nowrap";
-  document.body.appendChild(tip);
-  function show(el,x,y){
-    tip.innerHTML="<b>"+el.dataset.name+"</b><br>"+el.dataset.val+" · 전체의 "+el.dataset.pct;
-    tip.style.opacity="1";
-    var w=tip.offsetWidth,h=tip.offsetHeight;
-    tip.style.left=Math.min(x+14,innerWidth-w-8)+"px";
-    tip.style.top=Math.max(y-h-10,8)+"px";
-  }
-  function hide(){tip.style.opacity="0"}
-  document.querySelectorAll("#bars .barrow").forEach(function(row){
-    row.addEventListener("mousemove",function(e){show(row,e.clientX,e.clientY)});
-    row.addEventListener("mouseleave",hide);
-    row.addEventListener("focus",function(){var r=row.getBoundingClientRect();show(row,r.left+40,r.top)});
-    row.addEventListener("blur",hide);
-  });
-})();
-</script>
