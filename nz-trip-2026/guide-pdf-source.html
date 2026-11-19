@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><title>시드니 · 뉴질랜드 남섬 여행</title>
+<style>
+@font-face{font-family:K;font-weight:400;src:url(fonts/kr400.ttf)}
+@font-face{font-family:K;font-weight:500;src:url(fonts/kr500.ttf)}
+@font-face{font-family:K;font-weight:700;src:url(fonts/kr700.ttf)}
+@font-face{font-family:K;font-weight:900;src:url(fonts/kr900.ttf)}
+:root{--ink:#1d2430;--ink2:#4a5566;--ink3:#8691a1;--line:#e3e6ea;--paper:#fbfaf7;--syd:#1f6fa8;--syd-l:#e6f1f9;--nz:#2f7a57;--nz-l:#e7f3ec;--sand:#e39b2d;--sand-l:#fcf1de;--air:#6b5fb5;--air-l:#eeecf8}
+@page{size:A4;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:K,sans-serif;color:var(--ink);background:var(--paper);font-size:9.6pt;line-height:1.5;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;padding:13mm 13mm 11mm;position:relative;overflow:hidden;page-break-after:always;background:var(--paper)}
+.page:last-child{page-break-after:auto}
+h1{font-weight:900;font-size:30pt;line-height:1.15;letter-spacing:-.02em}
+h2{font-weight:900;font-size:17pt;letter-spacing:-.01em;margin-bottom:2mm}
+h3{font-weight:700;font-size:11pt;margin-bottom:1.5mm}
+.kicker{font-weight:700;font-size:8.5pt;letter-spacing:.14em;color:var(--ink3);text-transform:uppercase}
+.sub{color:var(--ink2);font-size:9.5pt}
+.foot{position:absolute;bottom:7mm;left:13mm;right:13mm;display:flex;justify-content:space-between;font-size:7.5pt;color:var(--ink3)}
+.pill{display:inline-block;font-size:7.6pt;font-weight:700;padding:.4mm 2.2mm;border-radius:10mm;margin-right:1mm}
+.p-syd{background:var(--syd-l);color:var(--syd)}.p-nz{background:var(--nz-l);color:var(--nz)}.p-air{background:var(--air-l);color:var(--air)}.p-sand{background:var(--sand-l);color:#a96a0c}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:4mm}
+.card{background:#fff;border:1px solid var(--line);border-radius:3mm;padding:4mm}
+/* cover */
+.cover{padding:0;background:#f4efe6}
+.cover .art{position:absolute;inset:0 0 auto 0;height:168mm}
+.cover .txt{position:absolute;left:14mm;right:14mm;top:176mm}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;margin-top:7mm}
+.fact{background:#fff;border-radius:3mm;padding:3.2mm 3.5mm;border:1px solid var(--line)}
+.fact b{display:block;font-size:13pt;font-weight:900;margin-top:.5mm}
+.fact span{font-size:7.8pt;color:var(--ink3);font-weight:700}
+.legs{margin-top:6mm;display:grid;grid-template-columns:repeat(4,1fr);gap:2mm}
+.leg{border-left:3px solid;padding:1mm 0 1mm 3mm;font-size:8.3pt;color:var(--ink2)}
+.leg b{display:block;color:var(--ink);font-size:9.3pt}
+/* day */
+.day{display:grid;grid-template-columns:24mm 1fr;gap:4mm;padding:3mm 0;border-top:1px solid var(--line)}
+.day:first-of-type{border-top:0}
+.dnum{border-radius:3mm;padding:2.5mm 2mm;text-align:center;color:#fff;height:fit-content}
+.dnum .d{font-size:7.5pt;font-weight:700;opacity:.85}
+.dnum .n{font-size:15pt;font-weight:900;line-height:1.1}
+.dnum .w{font-size:8pt;font-weight:700}
+.syd-bg{background:var(--syd)}.nz-bg{background:var(--nz)}.air-bg{background:var(--air)}
+.dtitle{font-weight:900;font-size:11pt;display:flex;align-items:center;gap:2mm}
+.dtitle svg{width:5.2mm;height:5.2mm;flex:none}
+.tl{margin-top:1.2mm;display:grid;grid-template-columns:12mm 1fr;column-gap:2.5mm;row-gap:.6mm;font-size:8.6pt}
+.tl .t{font-weight:700;color:var(--ink2);font-variant-numeric:tabular-nums}
+.stay{margin-top:1.2mm;font-size:8.2pt;color:var(--ink2)}
+.stay b{color:var(--ink)}
+.note{margin-top:1mm;font-size:8pt;color:#9a5d00;background:var(--sand-l);border-radius:1.5mm;padding:.8mm 2mm;display:inline-block}
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:8.4pt}
+th{font-weight:700;color:var(--ink3);text-align:left;font-size:7.6pt;padding:1.4mm 2mm;border-bottom:1.5px solid var(--ink)}
+td{padding:1.6mm 2mm;border-bottom:1px solid var(--line);vertical-align:top}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.k{font-weight:700;white-space:nowrap}
+.tip{display:grid;grid-template-columns:8mm 1fr;gap:2mm;align-items:start;margin-bottom:2.6mm;font-size:8.6pt}
+.tip .ic{width:8mm;height:8mm;border-radius:2mm;display:flex;align-items:center;justify-content:center}
+.tip .ic svg{width:5mm;height:5mm}
+.tip b{display:block;font-size:9.2pt}
+.bar{display:grid;grid-template-columns:22mm 1fr 25mm;align-items:center;gap:2mm;margin:1.5mm 0;font-size:8.4pt}
+.bar .b{height:4.2mm;border-radius:1mm}
+.bar .v{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.total{display:flex;gap:4mm;margin-bottom:4mm}
+.total div{flex:1;border-radius:3mm;padding:3.5mm 4mm;color:#fff}
+.total span{font-size:8pt;font-weight:700;opacity:.85}.total b{display:block;font-size:17pt;font-weight:900}
+</style></head><body>
+
+<!-- ICON SPRITES -->
+<svg width="0" height="0" style="position:absolute">
+ <symbol id="i-plane" viewBox="0 0 24 24"><path fill="currentColor" d="M21 15.5v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V8.5l-8 5v2l8-2.5V18l-2 1.5V21l3.5-1 3.5 1v-1.5L13 18v-5z"/></symbol>
+ <symbol id="i-wave" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M2 9c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2M2 15c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/></symbol>
+ <symbol id="i-mtn" viewBox="0 0 24 24"><path fill="currentColor" d="M2 20 9 8l4 6 2-3 7 9z"/><path fill="#fff" d="m9 8-1.6 2.7 1.6.8 1.4-.9z"/></symbol>
+ <symbol id="i-boat" viewBox="0 0 24 24"><path fill="currentColor" d="M3 15h18l-2.5 5h-13zM6 14V9h9l3 5zM9 6h3v3H9z"/></symbol>
+ <symbol id="i-spa" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M7 4c-1 1.5 1 2.5 0 4M12 3c-1 1.5 1 2.5 0 4M17 4c-1 1.5 1 2.5 0 4M3 12h18v2a7 7 0 0 1-7 7h-4a7 7 0 0 1-7-7z"/></symbol>
+ <symbol id="i-paw" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="6" cy="10" r="2.2"/><circle cx="10" cy="6" r="2.2"/><circle cx="14" cy="6" r="2.2"/><circle cx="18" cy="10" r="2.2"/><path d="M12 11c3 0 6 4 6 6.5S15.5 20 12 20s-6-.5-6-2.5S9 11 12 11z"/></g></symbol>
+ <symbol id="i-bag" viewBox="0 0 24 24"><path fill="currentColor" d="M5 8h14l-1 13H6zm4 0V6a3 3 0 0 1 6 0v2h-1.6V6a1.4 1.4 0 0 0-2.8 0v2z"/></symbol>
+ <symbol id="i-home" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3 2 11h3v9h5v-6h4v6h5v-9h3z"/></symbol>
+ <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2" fill="currentColor"/><rect x="2" y="9" width="20" height="2.5" fill="#fff"/></symbol>
+ <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5" fill="currentColor"/><rect x="8" y="5" width="8" height="12" fill="#fff"/></symbol>
+ <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" fill="currentColor"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></symbol>
+ <symbol id="i-cart" viewBox="0 0 24 24"><path fill="currentColor" d="M3 4h3l2.4 10h9.6l2-7H8"/><path fill="none" stroke="currentColor" stroke-width="2" d="M3 4h3l2.4 10h9.6l2-7H7.2"/><circle cx="10" cy="19" r="1.8" fill="currentColor"/><circle cx="17" cy="19" r="1.8" fill="currentColor"/></symbol>
+ <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="currentColor"/><text x="12" y="16.5" font-size="11" font-weight="900" text-anchor="middle" fill="#fff" font-family="K">$</text></symbol>
+</svg>
+
+<!-- PAGE 1 COVER -->
+<div class="page cover">
+ <svg class="art" viewBox="0 0 840 672" preserveAspectRatio="xMidYMid slice">
+  <defs>
+   <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7c98b"/><stop offset=".55" stop-color="#f6ddb8"/><stop offset="1" stop-color="#f4efe6"/></linearGradient>
+   <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f8fc4"/><stop offset="1" stop-color="#1f5f8b"/></linearGradient>
+   <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc3c9"/><stop offset="1" stop-color="#3d8f91"/></linearGradient>
+  </defs>
+  <rect width="840" height="672" fill="url(#sky)"/>
+  <circle cx="420" cy="250" r="78" fill="#fbe3b6"/><circle cx="420" cy="250" r="52" fill="#f8b65a"/>
+  <!-- NZ mountains right -->
+  <path d="M420 520 560 250 610 330 690 190 840 420V560H420z" fill="#5b8f7a"/>
+  <path d="M560 250 590 308 572 300 548 322zM690 190 728 262 704 252 676 274z" fill="#fff" opacity=".95"/>
+  <path d="M470 560 600 360 660 430 720 330 840 470V600H470z" fill="#2f7a57"/>
+  <rect x="420" y="540" width="420" height="132" fill="url(#lake)"/>
+  <path d="M440 572h70M560 590h90M700 566h80M480 616h110M660 630h120" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+  <!-- Sydney left -->
+  <rect x="0" y="540" width="430" height="132" fill="url(#sea)"/>
+  <path d="M0 380c70-120 220-120 300 0" fill="none" stroke="#2c3e50" stroke-width="9"/>
+  <path d="M0 380h300" stroke="#2c3e50" stroke-width="7"/>
+  <g stroke="#2c3e50" stroke-width="3">
+   <path d="M40 380 60 318M80 380 92 292M120 380 126 276M160 380 160 270M200 380 194 276M240 380 228 292M280 380 260 318"/>
+  </g>
+  <rect x="285" y="340" width="22" height="200" fill="#c9b79c"/><rect x="0" y="380" width="22" height="160" fill="#c9b79c"/>
+  <!-- opera house -->
+  <rect x="150" y="512" width="250" height="30" fill="#d8c5a5"/>
+  <path d="M170 512c10-70 50-110 92-118-20 40-26 80-22 118z" fill="#fff"/>
+  <path d="M232 512c14-74 58-112 104-118-24 42-30 82-26 118z" fill="#f4f4f2"/>
+  <path d="M300 512c10-54 42-84 76-88-18 32-22 60-18 88z" fill="#fff"/>
+  <path d="M170 512c10-70 50-110 92-118M232 512c14-74 58-112 104-118M300 512c10-54 42-84 76-88" fill="none" stroke="#b8b3a8" stroke-width="2"/>
+  <path d="M30 600h80M160 584h110M300 612h90M60 640h120" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+  <!-- plane -->
+  <path d="M120 150c150-70 330-80 470-20" fill="none" stroke="#1d2430" stroke-width="2" stroke-dasharray="6 7" opacity=".5"/>
+  <g transform="translate(588 128) rotate(22)"><use href="#i-plane" width="34" height="34" x="-17" y="-17" style="color:#1d2430"/></g>
+ </svg>
+ <div class="txt">
+  <div class="kicker">2026 · 11 · 21 — 11 · 30</div>
+  <h1 style="margin-top:2mm">시드니 · 뉴질랜드 남섬<br>여행 안내서</h1>
+  <p class="sub" style="margin-top:2.5mm">8박 10일 · 성인 2명 · 시드니 4박 + 남섬 패키지 4박 + 기내 1박</p>
+  <div class="facts">
+   <div class="fact"><span>출발</span><b>11/21 토</b>KE401 08:00 인천</div>
+   <div class="fact"><span>남섬 패키지</span><b>11/23–27</b>섬나라여행 4박5일</div>
+   <div class="fact"><span>귀국</span><b>11/30 월</b>KE402 06:35 인천</div>
+   <div class="fact"><span>총경비 (2인)</span><b>1,388만 원</b>1인 약 694만 원</div>
+  </div>
+  <div class="legs">
+   <div class="leg" style="border-color:var(--syd)"><b>시드니 2박</b>11/21–23 · ADGE</div>
+   <div class="leg" style="border-color:var(--nz)"><b>남섬 4박</b>11/23–27 · 패키지</div>
+   <div class="leg" style="border-color:var(--syd)"><b>시드니 2박</b>11/27–29 · YEHS</div>
+   <div class="leg" style="border-color:var(--air)"><b>기내 1박</b>11/29–30 · KE402</div>
+  </div>
+ </div>
+ <div class="foot"><span>최종 업데이트 2026.11.19</span><span>1</span></div>
+</div>
+
+<!-- PAGE 2 ROUTE MAP + HOTELS -->
+<div class="page">
+ <div class="kicker">Route</div>
+ <h2>여행 루트와 숙소</h2>
+ <svg viewBox="0 0 760 430" style="width:100%;margin:2mm 0 4mm;background:#eaf3f8;border-radius:3mm">
+  <text x="270" y="250" font-family="K" font-size="15" fill="#7fa9c4" font-weight="700" letter-spacing="6">TASMAN SEA</text>
+  <!-- Australia east coast -->
+  <path d="M0 0H175c-8 40 10 70 4 110-6 38 16 62 10 98-5 34 12 62 2 96-8 28 4 56-8 80-10 22-2 34-12 46H0z" fill="#efe3cf" stroke="#d6c4a3" stroke-width="2"/>
+  <text x="40" y="60" font-family="K" font-size="13" fill="#a68f6b" font-weight="700">호주</text>
+  <!-- NZ South Island -->
+  <path d="M640 40c14 18 30 30 34 52 6 30-14 52-30 76-18 28-40 46-62 70-24 26-40 58-66 82-22 20-48 30-72 34-16 3-28-6-22-22 8-22 28-38 44-58 24-30 46-58 70-88 22-28 40-58 62-90 12-18 24-46 42-56z" fill="#cfe5d5" stroke="#9cc4a8" stroke-width="2"/>
+  <path d="M676 30c10 6 20 2 28 12" stroke="#9cc4a8" stroke-width="2" fill="none"/>
+  <text x="600" y="30" font-family="K" font-size="13" fill="#5f9474" font-weight="700">뉴질랜드 남섬</text>
+  <!-- flights -->
+  <path d="M182 250C320 110 500 110 628 175" fill="none" stroke="#6b5fb5" stroke-width="2.5" stroke-dasharray="7 6"/>
+  <path d="M505 315C410 400 270 350 186 262" fill="none" stroke="#6b5fb5" stroke-width="2.5" stroke-dasharray="7 6"/>
+  <text x="300" y="128" font-family="K" font-size="12" fill="#6b5fb5" font-weight="700">JQ141 · 11/23 12:30</text>
+  <text x="250" y="378" font-family="K" font-size="12" fill="#6b5fb5" font-weight="700">JQ224 · 11/27 20:50</text>
+  <path d="M628 175 575 215 548 200 575 215 566 250 505 315 465 322 452 290 465 322 505 315" fill="none" stroke="#2f7a57" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <g font-family="K" font-size="11.5" font-weight="700" fill="#1d2430">
+   <circle cx="182" cy="250" r="8" fill="#1f6fa8"/><text x="196" y="246">시드니</text><text x="196" y="262" font-weight="500" fill="#4a5566" font-size="10.5">ADGE · YEHS</text>
+   <circle cx="628" cy="175" r="7" fill="#2f7a57"/><text x="640" y="172">크라이스트처치</text><text x="640" y="186" font-size="10" font-weight="500" fill="#4a5566">11/23</text>
+   <circle cx="575" cy="215" r="5" fill="#2f7a57"/><text x="586" y="219">테카포</text>
+   <circle cx="548" cy="200" r="5" fill="#2f7a57"/><text x="538" y="196" text-anchor="end">마운트쿡</text>
+   <circle cx="566" cy="250" r="6" fill="#2f7a57"/><text x="578" y="254">오마라마</text><text x="578" y="267" font-size="10" font-weight="500" fill="#4a5566">11/24</text>
+   <circle cx="505" cy="315" r="7" fill="#2f7a57"/><text x="517" y="322">퀸스타운</text><text x="517" y="335" font-size="10" font-weight="500" fill="#4a5566">11/26</text>
+   <circle cx="465" cy="322" r="5" fill="#2f7a57"/><text x="455" y="336" text-anchor="end">테아나우 11/25</text>
+   <circle cx="452" cy="290" r="5" fill="#e39b2d"/><text x="442" y="287" text-anchor="end">밀포드사운드 11/26</text>
+  </g>
+ </svg>
+ <h3>숙소 6곳</h3>
+ <table>
+  <thead><tr><th style="width:22mm">날짜</th><th>숙소</th><th style="width:30mm">지역</th><th>메모</th></tr></thead>
+  <tbody>
+   <tr><td class="k">11/21–23</td><td><span class="pill p-syd">시드니</span>ADGE Hotel &amp; Residences</td><td>212 Riley St, 서리힐스</td><td>트윈 · 체크아웃 10:30 · 무료취소 11/20 21:59(한국)</td></tr>
+   <tr><td class="k">11/23</td><td><span class="pill p-nz">패키지</span>Parkview On Hagley Hotel</td><td>크라이스트처치</td><td>20:00 공항 미팅 후 이동</td></tr>
+   <tr><td class="k">11/24</td><td><span class="pill p-nz">패키지</span>Omarama Heritage Gateway</td><td>오마라마</td><td></td></tr>
+   <tr><td class="k">11/25</td><td><span class="pill p-nz">패키지</span>Distinction Luxmore</td><td>테아나우</td><td>11월은 호텔 디너</td></tr>
+   <tr><td class="k">11/26</td><td><span class="pill p-nz">패키지</span>Copthorne Lakefront</td><td>27 Frankton Rd, 퀸스타운</td><td>체크아웃 10:00 · 시내 도보 7분</td></tr>
+   <tr><td class="k">11/27–29</td><td><span class="pill p-syd">시드니</span>YEHS Hotel Sydney Harbour Suites</td><td>252 Sussex St, 시티</td><td><b>체크인 23시 마감 → 늦은 도착 미리 연락</b> · 체크아웃 10:00</td></tr>
+  </tbody>
+ </table>
+
+ <h3 style="margin-top:7mm">11/27 퀸스타운 온천 동선</h3>
+ <svg viewBox="0 0 760 120" style="width:100%">
+  <g font-family="K" text-anchor="middle">
+   <line x1="70" y1="40" x2="690" y2="40" stroke="#e3e6ea" stroke-width="4"/>
+   <g><circle cx="70" cy="40" r="26" fill="#e7f3ec"/><use href="#i-home" x="56" y="26" width="28" height="28" style="color:#2f7a57"/><text x="70" y="88" font-size="12" font-weight="700" fill="#1d2430">10:00 체크아웃</text><text x="70" y="104" font-size="10.5" fill="#4a5566">짐 맡기기</text></g>
+   <g><circle cx="225" cy="40" r="26" fill="#fcf1de"/><text x="225" y="47" font-size="18" font-weight="900" fill="#e39b2d">10′</text><text x="225" y="88" font-size="12" font-weight="700" fill="#1d2430">도보 10분</text><text x="225" y="104" font-size="10.5" fill="#4a5566">43 Camp St</text></g>
+   <g><circle cx="380" cy="40" r="26" fill="#eeecf8"/><use href="#i-boat" x="366" y="26" width="28" height="28" style="color:#6b5fb5"/><text x="380" y="88" font-size="12" font-weight="700" fill="#1d2430">10:30 셔틀</text><text x="380" y="104" font-size="10.5" fill="#4a5566">Marmolada Cafe 앞</text></g>
+   <g><circle cx="535" cy="40" r="26" fill="#fcf1de"/><use href="#i-spa" x="521" y="26" width="28" height="28" style="color:#e39b2d"/><text x="535" y="88" font-size="12" font-weight="700" fill="#1d2430">11:15 온천</text><text x="535" y="104" font-size="10.5" fill="#4a5566">11:00 체크인</text></g>
+   <g><circle cx="690" cy="40" r="26" fill="#e6f1f9"/><use href="#i-sun" x="676" y="26" width="28" height="28" style="color:#1f6fa8"/><text x="690" y="88" font-size="12" font-weight="700" fill="#1d2430">12:45 복귀</text><text x="690" y="104" font-size="10.5" fill="#4a5566">셔틀 → 시내</text></g>
+  </g>
+ </svg>
+ <div class="foot"><span>시드니 · 뉴질랜드 남섬 여행 안내서</span><span>2</span></div>
+</div>
+
+<!-- PAGE 3 DAYS 1-5 -->
+<div class="page">
+ <div class="kicker">Day by day</div>
+ <h2>날짜별 일정 ①</h2>
+
+ <div class="day"><div class="dnum syd-bg"><div class="d">DAY</div><div class="n">1</div><div class="w">11/21 토</div></div>
+  <div><div class="dtitle"><svg style="color:var(--air)"><use href="#i-plane"/></svg>인천 → 시드니</div>
+  <div class="tl"><span class="t">08:00</span><span>KE401 인천 출발 (비즈니스)</span><span class="t">20:05</span><span>시드니 도착 → 우버 약 20분</span><span class="t">21:15</span><span>ADGE 체크인</span></div></div></div>
+
+ <div class="day"><div class="dnum syd-bg"><div class="d">DAY</div><div class="n">2</div><div class="w">11/22 일</div></div>
+  <div><div class="dtitle"><svg style="color:var(--syd)"><use href="#i-wave"/></svg>하버 구경 · 해안 산책 · 바다 수영</div>
+  <div class="tl">
+   <span class="t">08:00</span><span>Bills 서리힐스 아침 (리코타 핫케이크)</span>
+   <span class="t">09:00</span><span>하이드파크 · 세인트 메리 대성당 (도보)</span>
+   <span class="t">09:40</span><span>보타닉 가든 → 미세스 맥쿼리 체어 → 오페라하우스</span>
+   <span class="t">11:30</span><span>Rotunda 무료 전망대 (여객 터미널 4층)</span>
+   <span class="t">12:00</span><span>F4 페리로 바랑가루 → 옵저버토리 힐</span>
+   <span class="t">13:00</span><span>록스 마켓 점심 (또는 Elements Bar &amp; Grill)</span>
+   <span class="t">14:30</span><span>우버로 본다이 → 브론테 해안 산책로 (1~1.5시간)</span>
+   <span class="t">16:45</span><span>브론테 배스 바다 수영 (무료 · 샤워 18시까지)</span>
+   <span class="t">18:30</span><span>Bronte Belo 저녁 → 우버로 숙소</span>
+  </div><div class="note">다음 날 호텔 조식 없음 → 숙소 가는 길에 아침거리 사기</div></div></div>
+
+ <div class="day"><div class="dnum nz-bg"><div class="d">DAY</div><div class="n">3</div><div class="w">11/23 월</div></div>
+  <div><div class="dtitle"><svg style="color:var(--air)"><use href="#i-plane"/></svg>시드니 → 크라이스트처치 · 패키지 시작</div>
+  <div class="tl"><span class="t">08:30</span><span>전날 산 아침 · 체크아웃</span><span class="t">10:00</span><span>우버로 공항 (국제선)</span><span class="t">12:30</span><span>JQ141 출발 → 17:40 크라이스트처치</span><span class="t">20:00</span><span>가이드 미팅: <b>국내선 1층 짐 찾는 곳 자판기 앞</b></span></div>
+  <div class="stay"><svg width="11" height="11" style="color:var(--nz);vertical-align:-1px"><use href="#i-home"/></svg> <b>Parkview On Hagley Hotel</b></div></div></div>
+
+ <div class="day"><div class="dnum nz-bg"><div class="d">DAY</div><div class="n">4</div><div class="w">11/24 화</div></div>
+  <div><div class="dtitle"><svg style="color:var(--nz)"><use href="#i-mtn"/></svg>테카포 · 마운트쿡</div>
+  <div class="tl"><span class="t">07:00</span><span>전복죽 조식 → 07:45 크라이스트처치 시내관광</span><span class="t">12:30</span><span>테카포 Kohan 오벤또 점심 · 선한 목자의 교회</span><span class="t"></span><span>푸카키 호수 · 연어회 시식</span><span class="t">15:00</span><span>마운트쿡 후커밸리 · 키아포인트 트래킹 (각 1시간)</span><span class="t">18:00</span><span>트와이젤 Jasmine Thai 5코스</span></div>
+  <div class="stay"><svg width="11" height="11" style="color:var(--nz);vertical-align:-1px"><use href="#i-home"/></svg> <b>Omarama Heritage Gateway Hotel</b></div></div></div>
+
+ <div class="day"><div class="dnum nz-bg"><div class="d">DAY</div><div class="n">5</div><div class="w">11/25 수</div></div>
+  <div><div class="dtitle"><svg style="color:var(--nz)"><use href="#i-mtn"/></svg>린디스패스 · 퀸스타운 · 테아나우</div>
+  <div class="tl"><span class="t">08:00</span><span>린디스패스 · 크롬웰 · 카와라우 다리 (번지 발상지)</span><span class="t">12:00</span><span>Bendixs Stables 립아이 스테이크</span><span class="t"></span><span>스카이라인 곤돌라 + 자유시간: <b>루지(추가요금)</b> · 메리노 쇼핑 · 밀포드용 간식</span><span class="t">15:45</span><span>테아나우 이동 → 18:00 호텔 디너</span></div>
+  <div class="stay"><svg width="11" height="11" style="color:var(--nz);vertical-align:-1px"><use href="#i-home"/></svg> <b>Distinction Luxmore</b></div></div></div>
+ <div class="foot"><span>시드니 · 뉴질랜드 남섬 여행 안내서</span><span>3</span></div>
+</div>
+
+<!-- PAGE 4 DAYS 6-10 -->
+<div class="page">
+ <div class="kicker">Day by day</div>
+ <h2>날짜별 일정 ②</h2>
+
+ <div class="day"><div class="dnum nz-bg"><div class="d">DAY</div><div class="n">6</div><div class="w">11/26 목</div></div>
+  <div><div class="dtitle"><svg style="color:var(--nz)"><use href="#i-boat"/></svg>밀포드사운드</div>
+  <div class="tl"><span class="t">07:30</span><span>에글링턴 계곡 · 거울호수 · 호머터널 · Chasm</span><span class="t">11:15</span><span>밀포드사운드 크루즈 1시간 45분 · 선상 뷔페</span><span class="t">17:45</span><span>퀸스타운 두레 한식당 (된장찌개 · 제육)</span></div>
+  <div class="stay"><svg width="11" height="11" style="color:var(--nz);vertical-align:-1px"><use href="#i-home"/></svg> <b>Copthorne Lakefront</b></div>
+  <div class="note">밀포드 가는 길은 휴대폰 신호 없음 → 구글 오프라인 지도 미리 받기</div></div></div>
+
+ <div class="day"><div class="dnum nz-bg"><div class="d">DAY</div><div class="n">7</div><div class="w">11/27 금</div></div>
+  <div><div class="dtitle"><svg style="color:var(--sand)"><use href="#i-spa"/></svg>퀸스타운 온천 · 시드니 복귀</div>
+  <div class="tl">
+   <span class="t">10:00</span><span>체크아웃 · 리셉션에 짐 맡기기 (애로우타운 불참)</span>
+   <span class="t">10:30</span><span><b>온센 셔틀</b> · Marmolada Cafe(43 Camp St) 앞 · 호텔에서 도보 10분 · <b>정시 출발</b></span>
+   <span class="t">11:15</span><span>Onsen Hot Pools 1시간 (11:00 체크인 · 수영복)</span>
+   <span class="t">12:45</span><span>셔틀로 시내 복귀 → Fergburger 포장</span>
+   <span class="t">13:30</span><span>퀸스타운 가든 잔디에서 쉬기 → 16:00 호숫가 · Patagonia 젤라토</span>
+   <span class="t">17:00</span><span>이른 저녁 (Public Kitchen 또는 Botswana Butchery)</span>
+   <span class="t">18:00</span><span>짐 찾아 택시로 공항 (카운터 19:50 마감)</span>
+   <span class="t">20:50</span><span>JQ224 → 22:10 시드니 → 우버 → 23:15 YEHS 체크인</span>
+  </div></div></div>
+
+ <div class="day"><div class="dnum syd-bg"><div class="d">DAY</div><div class="n">8</div><div class="w">11/28 토</div></div>
+  <div><div class="dtitle"><svg style="color:var(--syd)"><use href="#i-paw"/></svg>마켓 · 동물원 · 하버브리지 · 수영</div>
+  <div class="tl"><span class="t">07:45</span><span>캐리지웍스 파머스마켓 아침 · 싱글오 커피 (토 08–13시)</span><span class="t">09:30</span><span>서큘러키 → F2 페리 12분 → <b>타롱가 동물원</b> (쿼카·코알라)</span><span class="t">14:00</span><span>하버브리지 걸어서 건너기 → 노스시드니 올림픽풀 → 루나파크</span><span class="t">18:00</span><span>Yakitori Yurippi 또는 Gigi's Pizza (예약)</span><span class="t">20:30</span><span>숙소 복귀 · 달링하버 불꽃놀이 확인</span></div>
+  <div class="note">비 오면 YEHS 도보 7분 WILD LIFE 시드니 동물원</div></div></div>
+
+ <div class="day"><div class="dnum syd-bg"><div class="d">DAY</div><div class="n">9</div><div class="w">11/29 일</div></div>
+  <div><div class="dtitle"><svg style="color:var(--syd)"><use href="#i-bag"/></svg>마켓 · 피시마켓 · 쇼핑 · 출국</div>
+  <div class="tl"><span class="t">10:00</span><span>YEHS 체크아웃 · 짐 맡기기 → 패디스 마켓</span><span class="t">11:15</span><span>시드니 피시마켓 (굴 · 사시미 · 랍스터) · L1 Wentworth Park 하차</span><span class="t">13:00</span><span>QVB · 피트스트리트몰 · 울워스 타운홀</span><span class="t">15:00</span><span>짐 찾아 The Mill 아울렛 (룰루레몬 · 아크테릭스)</span><span class="t">17:30</span><span>우버로 공항 → 21:55 KE402</span></div></div></div>
+
+ <div class="day"><div class="dnum air-bg"><div class="d">DAY</div><div class="n">10</div><div class="w">11/30 월</div></div>
+  <div><div class="dtitle"><svg style="color:var(--air)"><use href="#i-home"/></svg>인천 도착</div>
+  <div class="tl"><span class="t">06:35</span><span>인천 도착</span></div></div></div>
+ <div class="foot"><span>시드니 · 뉴질랜드 남섬 여행 안내서</span><span>4</span></div>
+</div>
+
+<!-- PAGE 5 BOOKINGS + TIPS -->
+<div class="page">
+ <div class="kicker">Bookings</div>
+ <h2>예약 정보</h2>
+ <table style="margin-bottom:6mm">
+  <thead><tr><th style="width:34mm">항목</th><th style="width:38mm">예약번호</th><th>내용</th></tr></thead>
+  <tbody>
+   <tr><td class="k">대한항공</td><td>—</td><td>KE401 11/21 08:00 → 20:05 · KE402 11/29 21:55 → 11/30 06:35 · 비즈니스</td></tr>
+   <tr><td class="k">젯스타 JQ141</td><td><b>SNQE5Z</b></td><td>11/23 12:30 시드니 → 17:40 크라이스트처치 · 좌석 24E/24F · 위탁 20kg</td></tr>
+   <tr><td class="k">젯스타 JQ224</td><td><b>PMR52M</b></td><td>11/27 20:50 퀸스타운 → 22:10 시드니 · 좌석 9D/9E · 위탁 20kg</td></tr>
+   <tr><td class="k">남섬 패키지</td><td>마이리얼트립 #3795728</td><td>섬나라여행 · NZ 무료전화 0800 14 1002 · 카카오톡 travelislands</td></tr>
+   <tr><td class="k">ADGE</td><td>마이리얼트립</td><td>11/21–23 트윈 · 늦은 체크인·금연 요청</td></tr>
+   <tr><td class="k">YEHS</td><td>—</td><td>11/27–29 · 결제 완료 · 환불 11/21 22:00(한국)까지</td></tr>
+   <tr><td class="k">Onsen Hot Pools</td><td><b>#416321</b><br>클룩 HXV801141</td><td>11/27 11:15 (11:00 체크인) · 셔틀 10:30 픽업 · 12:45 복귀 · 현장에서 클룩 바우처 KLK7830660828 제시 (추가 결제 없음)</td></tr>
+   <tr><td class="k">eSIM</td><td>Mysim</td><td>호주+뉴질랜드 매일 3GB · 11/21–29 · 출국 전 집 와이파이에서 설치</td></tr>
+  </tbody>
+ </table>
+ <div style="font-size:8pt;color:var(--ink3);margin:-4mm 0 6mm">젯스타 예약 메일은 sookrook@gmail.com 메일함에서 'Jetstar' 검색 · jetstar.com → Manage booking</div>
+
+ <div class="kicker">Tips</div>
+ <h2>꼭 기억할 것</h2>
+ <div class="grid2">
+  <div>
+   <div class="tip"><div class="ic" style="background:var(--syd-l);color:var(--syd)"><svg><use href="#i-card"/></svg></div><div><b>시드니 교통은 카드 탭</b>Visa·Mastercard를 개찰구에 그대로. 탈 때·내릴 때 모두 찍기. 두 사람 각자 다른 카드. 금~일 하루 상한 AU$9.65</div></div>
+   <div class="tip"><div class="ic" style="background:var(--air-l);color:var(--air)"><svg><use href="#i-plane"/></svg></div><div><b>젯스타 기내 7kg</b>기내 가방 2개 합쳐 7kg. 실제로 잼. 카운터는 출발 1시간 전 마감</div></div>
+   <div class="tip"><div class="ic" style="background:var(--nz-l);color:var(--nz)"><svg><use href="#i-phone"/></svg></div><div><b>eSIM · 로밍</b>현지 도착 후 한국 회선 '데이터 로밍' 끄기. 인증 문자는 한국 번호로 와요</div></div>
+  </div>
+  <div>
+   <div class="tip"><div class="ic" style="background:var(--sand-l);color:var(--sand)"><svg><use href="#i-coin"/></svg></div><div><b>패키지 가이드 팁</b>성인 1인 1일 NZ$10 (패키지 불포함)</div></div>
+   <div class="tip"><div class="ic" style="background:var(--sand-l);color:var(--sand)"><svg><use href="#i-sun"/></svg></div><div><b>날씨</b>시드니 11월 12–24°C. 남섬은 더 쌀쌀하고 바람 불면 추워요. 겉옷 · 선크림 · 모자 · 수영복</div></div>
+   <div class="tip"><div class="ic" style="background:var(--syd-l);color:var(--syd)"><svg><use href="#i-cart"/></svg></div><div><b>마트</b>울워스·콜스. 햇반은 거의 없어서 필요하면 한국에서</div></div>
+  </div>
+ </div>
+ <div class="foot"><span>시드니 · 뉴질랜드 남섬 여행 안내서</span><span>5</span></div>
+</div>
+
+<!-- PAGE 6 EXPENSES -->
+<div class="page">
+ <div class="kicker">Budget</div>
+ <h2>여행 경비</h2>
+ <div class="total">
+  <div style="background:var(--ink)"><span>2인 합계</span><b>13,884,682원</b></div>
+  <div style="background:var(--syd)"><span>1인</span><b>6,942,342원</b></div>
+ </div>
+ <h3>항목별 (2인)</h3>
+ <div class="bar"><span>항공권</span><div class="b" style="width:100%;background:var(--air)"></div><span class="v">8,319,682</span></div>
+ <div class="bar"><span>남섬 패키지</span><div class="b" style="width:43.3%;background:var(--nz)"></div><span class="v">3,602,042</span></div>
+ <div class="bar"><span>시드니 숙소</span><div class="b" style="width:14.7%;background:var(--syd)"></div><span class="v">1,225,361</span></div>
+ <div class="bar"><span>교통</span><div class="b" style="width:4.1%;background:var(--sand)"></div><span class="v">341,550</span></div>
+ <div class="bar"><span>비자</span><div class="b" style="width:2.8%;background:#8691a1"></div><span class="v">233,820</span></div>
+ <div class="bar"><span>온천</span><div class="b" style="width:1.3%;background:var(--sand)"></div><span class="v">103,137</span></div>
+ <div class="bar"><span>통신</span><div class="b" style="width:.8%;background:#8691a1"></div><span class="v">49,240</span></div>
+ <div class="bar" style="margin-bottom:6mm"><span>보험</span><div class="b" style="width:.4%;background:#8691a1"></div><span class="v">9,850</span></div>
+
+ <table>
+  <thead><tr><th style="width:16mm">구분</th><th>항목</th><th style="width:30mm">구매처</th><th class="n" style="width:22mm">1인</th><th class="n" style="width:24mm">2인</th></tr></thead>
+  <tbody>
+   <tr><td class="k">항공</td><td>KE401/402 인천–시드니 왕복 (비즈니스)</td><td>대한항공</td><td class="n">3,335,200</td><td class="n">6,670,400</td></tr>
+   <tr><td class="k">항공</td><td>JQ141 시드니–크라이스트처치</td><td>젯스타</td><td class="n">408,437</td><td class="n">816,875</td></tr>
+   <tr><td class="k">항공</td><td>JQ224 퀸스타운–시드니</td><td>젯스타</td><td class="n">416,204</td><td class="n">832,407</td></tr>
+   <tr><td class="k">패키지</td><td>뉴질랜드 남섬 4박5일</td><td>마이리얼트립</td><td class="n">1,801,021</td><td class="n">3,602,042</td></tr>
+   <tr><td class="k">숙소</td><td>ADGE 2박 (11/21–23)</td><td>마이리얼트립 · 삼성</td><td class="n">271,129</td><td class="n">542,257</td></tr>
+   <tr><td class="k">숙소</td><td>YEHS 2박 (11/27–29)</td><td>현대 3개월</td><td class="n">341,552</td><td class="n">683,104</td></tr>
+   <tr><td class="k">온천</td><td>Onsen Hot Pools (11/27)</td><td>클룩 · 남편 카드</td><td class="n">51,569</td><td class="n">103,137</td></tr>
+   <tr><td class="k">비자</td><td>뉴질랜드 NZeTA + 관광세</td><td>NZeTA 앱</td><td class="n">97,110</td><td class="n">194,220</td></tr>
+   <tr><td class="k">비자</td><td>호주 ETA</td><td>ETA 앱</td><td class="n">19,800</td><td class="n">39,600</td></tr>
+   <tr><td class="k">교통</td><td>공항 ↔ ADGE 우버 (11/21·23)</td><td>우버</td><td class="n">47,025</td><td class="n">94,050</td></tr>
+   <tr><td class="k">교통</td><td>공항 ↔ YEHS 우버 (11/27·29) · 예산</td><td>우버</td><td class="n">44,550</td><td class="n">89,100</td></tr>
+   <tr><td class="k">교통</td><td>시드니 시내 우버 (본다이 등)</td><td>우버</td><td class="n">49,500</td><td class="n">99,000</td></tr>
+   <tr><td class="k">교통</td><td>대중교통 3일 (카드 탭)</td><td>카드</td><td class="n">29,700</td><td class="n">59,400</td></tr>
+   <tr><td class="k">통신</td><td>eSIM 매일 3GB · 9일 × 2</td><td>Mysim · 생활비</td><td class="n">24,620</td><td class="n">49,240</td></tr>
+   <tr><td class="k">보험</td><td>해외여행자보험 10일</td><td>공용비</td><td class="n">4,925</td><td class="n">9,850</td></tr>
+   <tr><td colspan="3" style="font-weight:900">합계</td><td class="n" style="font-weight:900">6,942,342</td><td class="n" style="font-weight:900">13,884,682</td></tr>
+  </tbody>
+ </table>
+ <p style="font-size:7.8pt;color:var(--ink3);margin-top:2mm">식비 · 쇼핑 · 가이드 팁 · Soak 배스하우스는 금액이 정해지지 않아 합계에서 빠져 있어요.</p>
+ <div class="foot"><span>시드니 · 뉴질랜드 남섬 여행 안내서</span><span>6</span></div>
+</div>
+</body></html>

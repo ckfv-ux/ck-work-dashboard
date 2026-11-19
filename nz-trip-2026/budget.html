@@ -105,6 +105,11 @@
       <span>총 <b>10일</b> · 숙박 <b>8박</b> + 기내 1박</span>
       <span>시드니 <b>4박</b> · 남섬 패키지 <b>4박</b></span>
     </div>
+    <p id="pdfwrap" style="margin-top:12px;display:none"><button id="pdfbtn" type="button" style="padding:8px 14px;border:0;border-radius:8px;background:#1f6fa8;color:#fff;font-weight:700;font-size:14px;cursor:pointer">PDF 안내서 다운로드</button> <span id="pdfmsg" style="font-size:13px;margin-left:8px"></span></p>
+    <script>
+    (async()=>{try{const d=await window.claude?.use?.('downloads');if(!d)return;const w=document.getElementById('pdfwrap'),b=document.getElementById('pdfbtn'),m=document.getElementById('pdfmsg');w.style.display='block';
+    b.addEventListener('click',async()=>{m.textContent='';b.disabled=true;try{const r=await fetch('sydney-nz-trip-guide.pdf');if(!r.ok)throw{code:'unavailable'};const blob=await r.blob();await d.save({filename:'시드니_뉴질랜드_여행안내서.pdf',data:blob});m.textContent='저장했어요';}catch(e){if(e&&e.code==='declined'){m.textContent='';}else if(e&&e.code==='rate_limited'){m.textContent='잠시 후 다시 눌러 주세요';}else{m.textContent='이 화면에서는 다운로드할 수 없어요';}}finally{b.disabled=false;}});}catch(e){}})();
+    </script>
   </header>
 
   <section>
